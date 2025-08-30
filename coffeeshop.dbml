@@ -1,0 +1,19 @@
+Table orders {
+    id int [pk, increment]
+    employeeId int [ref: > employees.id]
+    productId int [ref: > products.id]
+    timestamp timestamp
+}
+
+Table employees {
+    id int [pk, increment]
+    name varchar
+    email varchar
+    hourlyRate decimal
+}
+
+Table products {
+    id int [pk, increment]
+    name varchar
+    price decimal
+}

@@ -1,16 +1,15 @@
-import { getEmployees } from "./database.js"
+import { getEmployees } from "./database.js";
 
-const employees = getEmployees()
+const employees = getEmployees();
 
 export const Employees = () => {
-    let html = "<ul>"
+  let html = "<ul>";
 
-    for (const employee of employees) {
-        html += `<li>${employee.name}</li>`
-    }
+  for (const employee of employees) {
+    html += `<li>${employee.name}</li>`;
+  }
 
-    html += "</ul>"
+  html += "</ul>";
 
-    return htm
-}
-
+  return html;
+};

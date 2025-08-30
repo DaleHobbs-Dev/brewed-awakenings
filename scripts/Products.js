@@ -1,16 +1,15 @@
-import { getProducts } from "./database.js"
+import { getProducts } from "./database.js";
 
-const products = getProducts()
+const products = getProducts();
 
 export const Products = () => {
-    let html = "<ul>`
+  let html = "<ul>";
 
-    for (const product of products) {
-        html += `<li>${product.title}</li>`
-    }
+  for (const product of products) {
+    html += `<li>${product.name}</li>`;
+  }
 
-    html += "</ul>"
+  html += "</ul>";
 
-    return html
-}
-
+  return html;
+};

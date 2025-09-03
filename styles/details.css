@@ -1,17 +1,16 @@
 .details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .detail--column {
-    flex-basis: 24%;
-    margin: 0 2rem;
-    padding: 1rem;
-    border: 1px dotted goldenrod;
+  flex-basis: 24%;
+  margin: 0 2rem;
+  padding: 1rem;
+  border: 1px dotted goldenrod;
 }
 
 .orders {
-    font-size: 20rem;
+  font-size: 20px;
 }
-

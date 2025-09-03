@@ -17,3 +17,40 @@ Table products {
     name varchar
     price decimal
 }
+
+Table locations {
+    id int [pk, increment]
+    name varchar
+}
+
+Table locationProducts {
+    id int [pk, increment]
+    locationId int [ref: > locations.id]
+    productId int [ref: > products.id]
+}
+
+Table employeeLocations {
+    id int [pk, increment]
+    employeeId int [ref: > employees.id]
+    locationId int [ref: > locations.id]
+}
+
+Table locationRecommendations {
+    id int [pk, increment]
+    locationId int [ref: > locations.id]
+    customerId int [ref: > customers.id]
+    recommendation varchar
+}
+
+Table productRatings {
+    id int [pk, increment]
+    productId int [ref: > products.id]
+    customerId int [ref: > customers.id]
+    rating int
+    review varchar
+}
+
+Table customers {
+    id int [pk, increment]
+    cardNumber varchar
+}
